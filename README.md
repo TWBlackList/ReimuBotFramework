@@ -1,4 +1,4 @@
-# ReimuAPI
+# ReimuBotFramework
 
 ## How to build ReimuBotFramework
 
