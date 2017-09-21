@@ -1,0 +1,14 @@
+{
+    "bind": "http://127.0.0.1:8084",
+    "api_key": "395571734:AAESo3t_4MPcr8jrwJ58uhGA4i6bF5UwulU",
+    "api_host": "api.telegram.org",
+    "admin_list": [
+        162391682
+    ],
+    "plugins": {
+        "important": [],
+        "normal": [
+            "HelloWorld"
+        ]
+    }
+}
