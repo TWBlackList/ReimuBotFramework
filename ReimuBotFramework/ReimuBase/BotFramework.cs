@@ -47,6 +47,10 @@ namespace ReimuBotFramework.ReimuBase
                         new NormalMessageCaller().call(message.message, JsonMessage);
                     }
                     catch (StopProcessException) { }
+                    catch (System.Exception e)
+                    {
+                        RAPI.GetExceptionListener().OnException(e, JsonMessage);
+                    }
                 }).Start();
             }
         }
