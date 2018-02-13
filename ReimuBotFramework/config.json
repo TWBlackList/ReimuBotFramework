@@ -8,6 +8,9 @@
     "op_list": [
         
     ],
+    "whitelist": [
+        
+    ],
     "plugins": {
         "important": [],
         "normal": [
