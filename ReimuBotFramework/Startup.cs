@@ -1,10 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.DependencyInjection;
-using System.IO;
+﻿using System.IO;
 using ReimuBotFramework.ReimuBase;
-using System;
 
 namespace ReimuBotFramework
 {
@@ -19,13 +14,10 @@ namespace ReimuBotFramework
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            
+            if (env.IsDevelopment()) app.UseDeveloperExceptionPage();
+
             BotFramework botFramework = new BotFramework();
-            app.Run(async (context) =>
+            app.Run(async context =>
             {
                 context.Response.ContentType = "text/plain";
                 string filePath = context.Request.Path;
@@ -36,11 +28,13 @@ namespace ReimuBotFramework
                     if (path == "/teleapireceiver")
                     {
                         botFramework.NewRequest(jsonString);
-                    } else if (path == "/pluginsreceiver")
+                    }
+                    else if (path == "/pluginsreceiver")
                     {
                         // TODO: 加入插件的 WebHook 支持
                     }
                 }
+
                 await context.Response.WriteAsync("a");
             });
         }

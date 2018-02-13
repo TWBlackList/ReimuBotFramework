@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-using ReimuAPI.ReimuBase;
+﻿using ReimuAPI.ReimuBase;
 
 namespace ReimuBotFramework
 {
@@ -11,10 +9,12 @@ namespace ReimuBotFramework
             BuildWebHost(args).Run();
         }
 
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+        public static IWebHost BuildWebHost(string[] args)
+        {
+            return WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .UseUrls(new ConfigManager().getConfig().bind)
                 .Build();
+        }
     }
 }
