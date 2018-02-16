@@ -4,7 +4,7 @@
   "api_host": "api.telegram.org",
   "admin_list": [
   ],
-  "sysop_list": [
+  "op_list": [
   ],
   "whitelist": [
   ],
