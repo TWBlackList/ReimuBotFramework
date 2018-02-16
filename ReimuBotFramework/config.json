@@ -4,9 +4,11 @@
   "api_host": "api.telegram.org",
   "admin_list": [
   ],
-  "op_list": [
+  "sysop_list": [
   ],
-  "whitelist": [
+  "white_list": [
+  ],
+  "blockgroup_list": [
   ],
   "plugins": {
     "important": [],
