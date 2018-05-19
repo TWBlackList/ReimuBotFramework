@@ -1,6 +1,6 @@
 {
   "bind": "http://127.0.0.1:8084",
-  "api_key": "395571734:AAESo3t_4MPcr8jrwJ58uhGA4i6bF5UwulU",
+  "api_key": "TELEGRAM_TOKEN",
   "api_host": "api.telegram.org",
   "admin_list": [
   ],
@@ -11,9 +11,7 @@
   "blockgroup_list": [
   ],
   "plugins": {
-    "important": [],
-    "normal": [
-      "HelloWorld"
-    ]
+    "important": ["BlackListSoamChecker"],
+    "normal": []
   }
 }

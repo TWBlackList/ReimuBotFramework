@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <Reference Include="ReimuAPI">
-      <HintPath>ReimuBotFramework\lib\ReimuAPI.dll</HintPath>
+      <HintPath>ReimuAPI.dll</HintPath>
     </Reference>
   </ItemGroup>
 
