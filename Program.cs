@@ -1,4 +1,6 @@
-﻿using ReimuAPI.ReimuBase;
+﻿using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
+using ReimuAPI.ReimuBase;
 
 namespace ReimuBotFramework
 {
