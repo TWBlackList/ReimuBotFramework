@@ -25,27 +25,11 @@ namespace ReimuBotFramework
             {
                 context.Response.ContentType = "text/plain";
                 string filePath = context.Request.Path;
-                if (filePath.Length >= 16)
+                if (filePath.Length >= 1)
                 {
                     string jsonString = new StreamReader(context.Request.Body).ReadToEnd();
-                    string path = filePath.Substring(0, 16).ToLower();
-                    if (path == "/teleapireceiver")
-                    {
-                        botFramework.NewRequest(jsonString);
-                    }
-                    else if (path == "/tw")
-                    {
-                        botFramework.NewRequest(jsonString);
-                    }
-                    else if (path == "/cn")
-                    {
-                        botFramework.NewRequest(jsonString);
-                    }
-                    else if (path == "/jorden")
-                    {
-                        botFramework.NewRequest(jsonString);
-                    }
-                    else if (path == "/dev")
+                    string path = filePath.ToLower();
+                    if (path == "/teleapireceiver" || path == "/tw" || path == "/cn" || path == "/jorden" || path == "/dev")
                     {
                         botFramework.NewRequest(jsonString);
                     }
