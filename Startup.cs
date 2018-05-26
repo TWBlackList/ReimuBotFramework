@@ -29,7 +29,7 @@ namespace ReimuBotFramework
                 {
                     string jsonString = new StreamReader(context.Request.Body).ReadToEnd();
                     string path = filePath.Substring(0, 16).ToLower();
-                    if (path == "/teleapireceiver" || path == "/twb" || path == "/cnb" || path == "/jl" || path == "/dl")
+                    if (path == "/teleapireceiver" || path == "/tw" || path == "/cn" || path == "/jorden" || path == "/dev")
                     {
                         botFramework.NewRequest(jsonString);
                     }
